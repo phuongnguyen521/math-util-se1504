@@ -5,3 +5,8 @@
 * JUnit Test and TestNG source code
 * Continuous Integration (CI) configuration
 * (TBD)
+
+### Screen shot:
+![JUnit-TDD](https://github.com/phuongnguyen521/math-util-se1504/blob/main/images/MyJUnit.PNG)
+
+© 2021 Ngọc Phượng
