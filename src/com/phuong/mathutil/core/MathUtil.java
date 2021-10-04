@@ -17,22 +17,40 @@ public class MathUtil {
     // TDD - Test Driven Developement - viết test trước khi viết code chính
     // Test First Development - suy nghĩ về bộ test-case,
     // các tình huống chạy hàm trước khi viết hàm
-   public static long getFactorial(int n){
-        
+//   public static long getFactorial(int n){
+//        
+//        if (n < 0 || n > 20){
+//            throw new IllegalArgumentException("n must be between 0..20");
+//        }
+//        
+//        if (n ==0 || n == 1){
+//            return 1;
+//        }
+//        
+//        long product = 1; // khởi đầu giai thừa bằng một
+//        
+//        for (int i = 1; i <= n; i++)
+//            product *= i;
+//        
+//        return product;
+//    }
+    //Đệ quy, recursion, gọi lại chính mình với quy mô khác
+    // Búp bê người Nga
+    // 5! = 1.2.3.4.5
+    // 5! = 5 * 4!
+    // 4! = 4 * 3!
+    // 3! = 3 * 2!
+    // 2! = 2 * 1!
+    // 1! = 1 - dừng
+    // n! = n * (n - 1)! công thức lặp lại chính mình
+    public static long getFactorial(int n){
         if (n < 0 || n > 20){
-            throw new IllegalArgumentException("n must be between 0..20");
+            throw new IllegalArgumentException("n must be between 0 .. 20");
         }
-        
-        if (n ==0 || n == 1){
+        if (n == 0 || n == 1){
             return 1;
         }
-        
-        long product = 1; // khởi đầu giai thừa bằng một
-        
-        for (int i = 1; i <= n; i++)
-            product *= i;
-        
-        return product;
+        return n * getFactorial(n - 1);
     }
     
     

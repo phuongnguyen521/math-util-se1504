@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  *
- * @author DELL
+ * @author SE150998 - Phượng
  */
 public class FactoriatTest {
 
